@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  title: MyString
+  description: MyText
+  age: 1
+  potty_trained: false
+  likes_dogs: false
+  likes_children: false
+  state: MyString
+  city: MyString
+
+two:
+  user: two
+  title: MyString
+  description: MyText
+  age: 1
+  potty_trained: false
+  likes_dogs: false
+  likes_children: false
+  state: MyString
+  city: MyString
