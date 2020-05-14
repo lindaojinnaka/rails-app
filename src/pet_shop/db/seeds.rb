@@ -2,7 +2,7 @@ user = User.create(email:"lindaojinnaka@gmail.com", password: "password")
 
 for i in 0..10
 dog = user.dogs.create(
-    title:Faker::Creature::Dog.name,
+    name:Faker::Creature::Dog.name
     description:Faker::Lorem.paragraph,
     age:Faker::Number.number(digits: 1),
     potty_trained:true,
@@ -10,7 +10,6 @@ dog = user.dogs.create(
     likes_children:true,
     state:Faker::Address.state,
     city:Faker::Address.city,
-    name:Faker::Creature::Dog.name
 )
 
 end
