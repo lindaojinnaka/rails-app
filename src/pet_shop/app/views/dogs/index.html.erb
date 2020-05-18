@@ -1,9 +1,15 @@
 
 <h1> Pet Match Profiles </h1>
-<% for dog in @dogs %> 
-<%= dog.title %>
-<br />
-<%= dog.city %>
-<% end %>
+<%= link_to "Create a listing", new_dogs_path %>
+<br>
+<br>
+<br>
 
+<% for dog in @dogs %> 
+
+<%= link_to "#{dog.title}", dog_path(dog.id)%>
+<br/>
+
+
+<% end %>
 

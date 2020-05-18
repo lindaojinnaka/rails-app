@@ -1,1 +1,45 @@
-individual dog 
+<h1><%= @dog.title %></h1>
+<% if @dog.picture.attached? %>
+<%= image_tag @dog.picture, style: "width: 200px" %>
+<% end %>
+
+
+
+
+
+<%= @dog.description %>
+<br>
+<%= @dog.age %>
+<br>
+<%= @dog.state %>
+<br>
+<%= @dog.city %>
+<br>
+<%= @dog.name %>
+<br>
+<%= @dog.potty_trained %>
+<br>
+<%= @dog.likes_children %>
+<br>
+<%= @dog.likes_dogs %>
+<br>
+<%= @dog.breed %>
+<br>
+<br>
+<br>
+<% if current_user.id == @dog.user.id %>
+<%= link_to "edit", edit_dogs_path(@dog.id) %>
+<br>
+<%= form_with model: @dog, local: true, method: "delete" do |form| %>
+    <%= submit_tag "delete" %>
+    <% end %>
+    <% end %>
+
+
+<h2> Inquire about this listing </h2>
+
+<div>
+
+</div>
+<div>
+

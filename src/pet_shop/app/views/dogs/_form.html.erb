@@ -1,8 +1,22 @@
 <h1> Dog Match Listings </h1>
+<% if dog.errors.any? %>”
+    <ul> 
+    <% dog.errors.full_messages.each do |error| %>
+    <li> <%=error%></li> 
+<%end%>    
+</ul>
+<%end%>    
+
+
 <%= form_with model: dog, local: true do |form| %>
     <div>
         <%= form.label :"Listing title" %>
         <%= form.text_field :title, value: dog.title %>
+    </div>
+    <div>
+    <div>
+        <%= form.label :"Name" %>
+        <%= form.text_field :name, value: dog.name %>
     </div>
     <div>
     <%= form.label :"Description" %>
@@ -11,42 +25,55 @@
 </div>
 <div>
 <%= form.label :"Breed" %>
-<%= form.text_area :description, value: dog.description %>
+<%= form.text_area :breed, value: dog.breed%>
 </div>
 </div>
 <div>
 <%= form.label :"Age" %>
-<%= form.text_area :description, value: dog.description %>
+<%= form.text_area :age, value: dog.age %>
 </div>
 </div>
 <div>
 <%= form.label :"State" %>
-<%= form.text_area :description, value: dog.description %>
+<%= form.text_area :state, value: dog.state %>
 </div>
 </div>
 <div>
 <%= form.label :"City" %>
-<%= form.text_area :description, value: dog.description %>
+<%= form.text_area :city, value: dog.city %>
 </div>
 </div>
 <div>
-<%= form.label :"Potty Trained" %>
-<%= form.text_area :description, value: dog.description %>
+
+
+Potty trained?
+<%= check_box_tag(:dog) %>
+<%= label_tag(:dog, "Yes") %>
+<%= check_box_tag(:dog) %>
+<%= label_tag(:dog, "No") %>
+</div>
 </div>
 </div>
 <div>
 <%= form.label :"Likes Dogs" %>
-<%= form.text_area :description, value: dog.description %>
+<%= check_box_tag(:yes_potty_trained) %>
+<%= label_tag(:pet_dog, "yes") %>
+<%= check_box_tag(:no_potty_trained) %>
+<%= label_tag(:pet_cat, "no") %>
+
 </div>
 </div>
 <div>
 <%= form.label :"Likes Children" %>
-<%= form.text_area :description, value: dog.description %>
+<%= check_box_tag(:yes_potty_trained) %>
+<%= label_tag(:pet_dog, "yes") %>
+<%= check_box_tag(:no_potty_trained) %>
+<%= label_tag(:pet_cat, "no") %>
 </div>
 </div>
 <div>
 <%= form.label :picture %>
-<%= form.file_field :picture, accept: "image/png,image/gif,image/jpeg,image/jpng" %>
+<%= form.file_field :picture, accept: "image/png,image/gif,image/jpeg,image/jpg" %>
 </div>
 <div>
     <%= form.submit %>
