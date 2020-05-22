@@ -1,45 +1,48 @@
-<h1><%= @dog.title %></h1>
+<%= render "header", dog: @dog %>
+
+
+                        
 <% if @dog.picture.attached? %>
-<%= image_tag @dog.picture, style: "width: 200px" %>
+<%= image_tag @dog.picture, style: "width: 350px" %>
 <% end %>
 
+<div class="column is-6 is-offset-1">
+   <h1 class="title is-2">
+   <h1><%= @dog.title %></h1>
+   </h1>
+   <br>
+                        Breed: <%= @dog.breed %>
+                        <br>
+                        Name: <%= @dog.name %>
+                        <br>
+                        <br>
+                        Description: <%= @dog.description %>
+                        <br>
+                        <br>
+                        Age: <%= @dog.age %>
+                        <br>
+                        <br>
+                        Location: <%= @dog.state  %>
+                        <br>
+                        <br>
+                        Potty Trained?<%= @dog.potty_trained %>
+                        <br>
+                        Likes children?<%= @dog.likes_children %>
+                        <br>
+                        Likes Dogs?<%= @dog.likes_dogs %>
+                        <br>
+                        <% if current_user.id == @dog.user.id %>
+                        <%= link_to  "edit", edit_dogs_path(@dog.id) %>
+                        <%= form_with model: @dog, local: true, method: "delete" do |form| %>
+                     <%= submit_tag "delete" %>
+                        <% end %>
+                        <% end %>
+                        
+                    </div>
+            
+           
 
 
 
 
-<%= @dog.description %>
-<br>
-<%= @dog.age %>
-<br>
-<%= @dog.state %>
-<br>
-<%= @dog.city %>
-<br>
-<%= @dog.name %>
-<br>
-<%= @dog.potty_trained %>
-<br>
-<%= @dog.likes_children %>
-<br>
-<%= @dog.likes_dogs %>
-<br>
-<%= @dog.breed %>
-<br>
-<br>
-<br>
-<% if current_user.id == @dog.user.id %>
-<%= link_to "edit", edit_dogs_path(@dog.id) %>
-<br>
-<%= form_with model: @dog, local: true, method: "delete" do |form| %>
-    <%= submit_tag "delete" %>
-    <% end %>
-    <% end %>
-
-
-<h2> Inquire about this listing </h2>
-
-<div>
-
-</div>
-<div>
 

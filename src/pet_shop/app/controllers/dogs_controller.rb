@@ -7,21 +7,23 @@ def home
 end 
 
 def index
+    
     @dogs = Dog.all
     
-
 end
 
 def new 
-    @dog = Dog.new   
+    
+    @dog = Dog.new  
+
 end 
 
 
 def create
- 
     @dog = current_user.dogs.create(dog_params)
-    if @dog.errors.any?
-        render "new"
+    if 
+    @dog.errors.any?
+    render "new"
     else 
         redirect_to dogs_path
     end
@@ -35,38 +37,71 @@ end
 
 def edit
     @dog = Dog.find_by_id(params[:id])
-    if @dog 
+    if 
+    @dog 
     render ("edit")
     else 
     redirect_to dogs_path
-end
+    end
 end 
 
 def update 
     @dog = Dog.find_by_id(params[:id])
-    if @dog
-        @dog.update(dog_params)
-    if @dog.errors.any?
-        render "edit"
+    if 
+    @dog
+    @dog.update(dog_params)
+    if 
+    @dog.errors.any?
+    render "edit"
     else 
         redirect_to dogs_path
-    end 
-else 
+ end 
+    else 
     redirect_to dogs_path
 end
 end 
 
+
 def destroy 
     @dog = Dog.find_by_id(params[:id])
-    if @dog
-        @dog.destroy
+    if 
+    @dog
+    @dog.destroy
     redirect_to dogs_path
+    end
+end 
+
+def whoweare
+
+end 
+
+def contactus
+
 end
+
+
+def thankyou
+
+
+end
+
+
+def account
+
+
+end
+
+
+
+def aboutus 
+
 end 
 
 private 
 def dog_params
-    params.require(:dog).permit(:title, :description, :breed, :age, :state, :city, :likes_dogs, :likes_children, :picture, :name)
+
+    params.require(:dog).permit(:title, :description, :breed, :age, :picture, :name)
+
 end 
 
 end 

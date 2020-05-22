@@ -1,15 +1,42 @@
+<%= render "header", dog: @dog %>
 
-<h1> Pet Match Profiles </h1>
+
+ <h1> Pet Match Profiles </h1>
 <%= link_to "Create a listing", new_dogs_path %>
 <br>
 <br>
 <br>
-
-<% for dog in @dogs %> 
-
-<%= link_to "#{dog.title}", dog_path(dog.id)%>
-<br/>
-
-
-<% end %>
-
+<div class="container">
+    <div id="flow">
+        <span class="flow-1"></span>
+        <span class="flow-2"></span>
+        <span class="flow-3"></span>
+    </div>
+    <div class="row columns">
+        <div class="column is-one-third">
+        <% for dog in @dogs %> 
+            <div class="card large">
+                <div class="card-image">
+                    <figure class="image">
+                        <%= image_tag dog.picture if dog.picture.attached?%>
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-96x96">
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4 no-padding"> <%= link_to dog.title, dog_path(dog.id)%> </p>
+                            <p class="subtitle is-6"> <%= dog.breed %> </p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</div>
+                            

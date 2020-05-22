@@ -11,5 +11,7 @@ Rails.application.routes.draw do
   put "dogs/:id", to: "dogs#update"
   patch "/dogs/:id", to: "dogs#update"
   delete  "dogs/:id", to: "dogs#destroy"
-
+  get "/whoweare", to:"dogs#whoweare"
+  get "/contactus", to:"dogs#contactus"
+  get "aboutus", to: "dogs#aboutus"
 end

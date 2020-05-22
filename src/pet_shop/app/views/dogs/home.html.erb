@@ -1,2 +1,192 @@
-<h1> Pet Match </h1>
-<h2> Your dream dog is waiting, take a peek below! </h2>
+<%= render "header", dog: @dog %>
+     <section class="hero">
+        <figure class="image">
+        <%= image_tag "banner5.jpg" %> </figure>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 class="title is-2">
+    <center>Welcome to Dog Match! </center>
+  </h1>
+
+  <h1 class="title is-3">
+  <center>Here are our top featured dogs in NSW </center>
+</h1>
+
+
+    <div class="container">
+        <div id="flow">
+            <span class="flow-1"></span>
+            <span class="flow-2"></span>
+            <span class="flow-3"></span>
+        </div>
+    </div>
+        
+        <div class="row columns">
+            <div class="column is-one-third">
+                <div class="card large">
+                    <div class="card-image">
+                        <figure class="image">
+                        <%= image_tag "scrappy.jpg",:style => 'height:400px;width:auto;' %>
+                         </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">   
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <p class="title is-4 no-padding">Murphy Loves to play fetch!</p>
+                                <p class="subtitle is-6">Lab Mix</p>
+                                <%= link_to "Find out more", dog_path(2)%>
+                                </div>
+                        </div>
+                        <div class="content">
+                            <div class="background-icon"><span class="icon-twitter"></span></div>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column is-one-third">
+            <div class="card large">
+                <div class="card-image">
+                    <figure class="image">
+                        <%= image_tag "Chico.jpg",:style => 'height:400px;width:auto;'  %>
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-96x96"> </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4 no-padding">Energetic and loving</p>
+                            <p class="subtitle is-6">Bulldog</p>
+                            <%= link_to "Find out more", dog_path(2)%>
+                            </div>
+                    </div>
+                    <div class="content">
+                        <div class="background-icon"><span class="icon-facebook"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                    <div class="column is-one-third">
+                                                                    <div class="card large">
+                                                                        <div class="card-image">
+                                                                            <figure class="image">
+                                                                            <%= image_tag "panda.jpg",:style => 'height:400px;width:auto;' %>
+                                                                            </figure>
+                                                                </div>
+                                                                <div class="card-content">
+                                                                    <div class="media">
+                                                                        <div class="media-left">
+                                                                            <figure class="image is-96x96">
+                                                                            </figure>
+                                                                </div>
+                                                                <div class="media-content">
+                                                                    <p class="title is-4 no-padding">Loves children and dogs!</p>
+                                                                    <p class="subtitle is-6">Pit-Mix</p>
+                                                                    <%= link_to "Find out more", dog_path(2)%>
+                                                                    <div class="column is-6 is-offset-1">
+                                                                <h1 class="title is-2"></h1>                
+                                                                </div>
+                                                                </div>
+                                                                </div>
+                                                                </div>
+                                                                </div>
+                                                                </div>
+                                                                </div>
+                                                            <center> <%= link_to 'View More', "/dogs" %> </center>
+
+                                                              </a></center>
+                                                            <br>
+                                                            <br>
+                                                            <br>
+                                                            <br>
+                                                            <br>
+                                                           
+                                                            <h1 class="title is-2">
+                                                             <center>  Why adopt? </center>
+                                                             
+                                                           </h1>
+                                                           <h2 class="subtitle is-4">
+                                                           <center> Thousands of dogs are surrendered to animal shelters across NSW every year. Adopting a dog from a shelter is the perfect way to give a dog a second chance at finding happiness in a new loving home. Most importantly, adoption saves lives.<br> <br>Every time an animal is adopted to a furever home, a space is opened in the shelter and foster care network for another dog in need. Adoptions also effectively reduces overcrowded shelters which unfortuntely can lead to euthanizations. <br> <br> Make a difference to a pet's life and Adopt.      
+                                                           <ul>
+  
+</ul> <center>
+                                                           </h2>
+                                                         
+                                                       </div>
+                                                       <br>
+                                                       <br>
+                                                       <br>
+                                                       <br>
+                                                       <br>
+                                                       <br>     
+                                                       <br>
+                                                       <br>     
+                                                            
+      <!-- Begin About Me Section -->
+      <div class="section-light about-me" id="about-me">
+        <div class="container">
+          <div class="column is-12 about-me">
+          </div>
+          <div class="columns is-multiline">
+            <div
+              class="column is-6 has-vertically-aligned-content"
+              data-aos="fade-right"
+            >
+              <p class="is-larger">
+                &emsp;&emsp;<strong
+                <br> 
+            
+                 <center>Who we are</center> 
+                 <br> Dog match is a non-profit group that matches dogs in shelters across Australia to their new forever homes! We believe every animal deserves a loving home and it is our aim to match pets to the lifestyle of potentional owners. This ensures a happy and long lasting relationship for the pups and their new best friend! All dogs listed have undergone a comprehensive vet check and are microchipped, desexed and treated for parasites. Rest assured your new best friend will arrive happy and healthy. <br><br>We also pride ourselves in featuring a wide range of breeds, ages, and temperament so you have a wider variety to choose from and also so that each dog is given a chance at a new loving home. If you find a dog that is right for you, please contact the listed shelter to make arrangements to meet your potential new pet.  
+                 </strong
+                >
+              </p>
+             
+              <br/>
+              <div class="is-divider"></div>
+              <div class="columns about-links">  
+                <div class="column">
+                </div>
+                <div class="column">
+                  <p class="heading">
+                </div>
+              </div>
+            </div>
+           
+            <div class="column is-6 right-image " data-aos="fade-left">
+            <br>
+            <br>
+            <br>
+            <%= image_tag "volunteer2.jpg" %>
+            </div>
+          </div>
+        </div>
+      </div>
+                <footer class="footer">
+                <div class="container">
+                    <div class="content has-text-centered">
+                        <p>
+                            Connect with Us 
+                            <div class="social-media">
+							<a href="https://facebook.com" target="_blank" class="button is-light is-large"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+							<a href="https://instagram.com" target="_blank" class="button is-light is-large"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+							<a href="https://twitter.com" target="_blank" class="button is-light is-large"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+						</div>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </footer>
+            <ul>
+           

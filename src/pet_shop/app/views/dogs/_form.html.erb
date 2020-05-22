@@ -1,81 +1,56 @@
-<h1> Dog Match Listings </h1>
+<%= render "header", dog: @dog %>
+
 <% if dog.errors.any? %>”
     <ul> 
     <% dog.errors.full_messages.each do |error| %>
     <li> <%=error%></li> 
 <%end%>    
-</ul>
-<%end%>    
-
+    </ul>
+    <%end%>    
+<br>
+    <br>
 
 <%= form_with model: dog, local: true do |form| %>
-    <div>
-        <%= form.label :"Listing title" %>
-        <%= form.text_field :title, value: dog.title %>
-    </div>
-    <div>
-    <div>
-        <%= form.label :"Name" %>
-        <%= form.text_field :name, value: dog.name %>
-    </div>
-    <div>
-    <%= form.label :"Description" %>
-    <%= form.text_area :description, value: dog.description %>
-</div>
-</div>
-<div>
-<%= form.label :"Breed" %>
-<%= form.text_area :breed, value: dog.breed%>
-</div>
-</div>
-<div>
-<%= form.label :"Age" %>
-<%= form.text_area :age, value: dog.age %>
-</div>
-</div>
-<div>
-<%= form.label :"State" %>
-<%= form.text_area :state, value: dog.state %>
-</div>
-</div>
-<div>
-<%= form.label :"City" %>
-<%= form.text_area :city, value: dog.city %>
-</div>
-</div>
-<div>
-
-
-Potty trained?
+    
+    <center><%= form.label :"Listing title" %></center>
+        <center><%= form.text_field :title, value: dog.title %></center>
+        <br>  
+    <center><%= form.label :"Name" %></center>
+        <center><%= form.text_field :name, value: dog.name %></center>
+        <br>
+    <center><%= form.label :"Description" %></center>
+    <center><%= form.text_area :description, value: dog.description, "cols" => 100, "rows" => 15 %></center>
+        <br>
+    <center><%= form.label :"Breed" %></center>
+    <center><%= form.text_area :breed, value: dog.breed%></center>
+    <br>
+    <center><%= form.label :"Age" %></center>
+    <center><%= form.text_area :age, value: dog.age %></center>
+    <br>
+    <center><%= form.label :"State" %></center>
+    <center><%= form.text_area :state, value: dog.state %></center>
+    <br>
+    <br>
+    <center>Potty trained?
 <%= check_box_tag(:dog) %>
 <%= label_tag(:dog, "Yes") %>
 <%= check_box_tag(:dog) %>
 <%= label_tag(:dog, "No") %>
-</div>
-</div>
-</div>
-<div>
-<%= form.label :"Likes Dogs" %>
+<%= form.label :"Likes Dogs?" %>
 <%= check_box_tag(:yes_potty_trained) %>
 <%= label_tag(:pet_dog, "yes") %>
 <%= check_box_tag(:no_potty_trained) %>
 <%= label_tag(:pet_cat, "no") %>
-
-</div>
-</div>
-<div>
-<%= form.label :"Likes Children" %>
+<%= form.label :"Likes Children?" %>
 <%= check_box_tag(:yes_potty_trained) %>
 <%= label_tag(:pet_dog, "yes") %>
 <%= check_box_tag(:no_potty_trained) %>
-<%= label_tag(:pet_cat, "no") %>
-</div>
-</div>
-<div>
-<%= form.label :picture %>
-<%= form.file_field :picture, accept: "image/png,image/gif,image/jpeg,image/jpg" %>
-</div>
-<div>
-    <%= form.submit %>
-</div>
+<%= label_tag(:pet_cat, "no") %><center>
+<br>
+<center><%= form.label :picture %>
+<%= form.file_field :picture, accept: "image/png,image/gif,image/jpeg,image/jpg" %></center>
+<br>
+<%= form.submit %>
 <% end %>
+
+
