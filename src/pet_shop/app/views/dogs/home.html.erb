@@ -9,124 +9,136 @@
     <link rel="stylesheet" href="all.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <style>
-    #navbarBasicExample {
-        font-size: 20px;
-        background-color; 
+
+#navbarBasicExample{
+    font-size: 20px;
+    background-color; 
     }
       
-    a {
-        color:black;
-        text-decoration: none;
-    }
+a {
+    color:black;
+    text-decoration: none;
+}
 
-    .title {
-        text-align: center;
-    }
-
-
+.title {
+    text-align: center;
+}
+    
     </style>
 </head>
 
+
 <%= render "header", dog: @dog %>
+
 <section class="hero is-dark">
-<div class="hero-body">
-  <div class="container">
-    <h1 class="title">
-      Adopt your new best friend!
-    </h1>
-  
-  </div>
-</div>
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+            Adopt your new best friend!
+            </h1>
+        </div>
+    </div>
 </section>
 
-  <h1 class="title is-1 mt-5 ">
+
+<h1 class="title is-1 mt-5 ">
   <center>Here are our top featured dogs in NSW </center>
 </h1>
 
 
-    <div class="container">
-        <div id="flow">
-            <span class="flow-1"></span>
-            <span class="flow-2"></span>
-            <span class="flow-3"></span>
-        </div>
+<div class="container">
+    <div id="flow">
+        <span class="flow-1"></span>
+        <span class="flow-2"></span>
+        <span class="flow-3"></span>
     </div>
+</div>
         
-        <div class="row columns">
-            <div class="column is-one-third">
-                <div class="card large">
-                    <div class="card-image">
-                        <figure class="image">
-                        <%= image_tag "scrappy.jpg",:style => 'height:400px;width:auto;' %>
-                         </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-left">
-                                <figure class="image is-96x96">   
-                                </figure>
-                            </div>
-                            <div class="media-content">
-                            <p class="title is-4 no-padding">Murphy Loves to play fetch!</p>
-                                <%= link_to "Find out more", dog_path(2)%>
-                                </div>
-                        </div>
-                        <div class="content">
-                        </div>
-                </div>
+ <div class="row columns">
+    <div class="column is-one-third">
+        <div class="card large">
+            <div class="card-image">
+                <figure class="image">
+                    <%= image_tag "scrappy.jpg",:style => 'height:400px;width:auto;' %>
+                </figure>
             </div>
+                    
+<div class="card-content">
+    <div class="media">
+        <div class="media-left">
+            <figure class="image is-96x96">   
+            </figure>
+        </div>
+                            
+        
+<div class="media-content">
+    <p class="title is-4 no-padding">Murphy Loves to play fetch!</p>
+        <%= link_to "Find out more", dog_path(2)%>
+</div>
+</div>
+                        
+<div class="content">
+</div>
+</div>
+</div>
+</div>
+
+<div class="column is-one-third">
+     <div class="card large">
+        <div class="card-image">
+            <figure class="image">
+                <%= image_tag "Chico.jpg",:style => 'height:400px;width:auto;'  %>
+            </figure>
+        </div>
+                
+<div class="card-content">
+    <div class="media">
+        <div class="media-left">
+            <figure class="image is-96x96"> </figure>
         </div>
 
-        <div class="column is-one-third">
-            <div class="card large">
-                <div class="card-image">
-                    <figure class="image">
-                        <%= image_tag "Chico.jpg",:style => 'height:400px;width:auto;'  %>
-                    </figure>
-                </div>
-                <div class="card-content">
-                    <div class="media">
-                        <div class="media-left">
-                            <figure class="image is-96x96"> </figure>
-                        </div>
-                        <div class="media-content">
-                            <p class="title is-4 no-padding">Energetic and loving</p>
-                            <%= link_to "Find out more", dog_path(2)%>
-                            </div>
-                    </div>
-                    <div class="content">
-                    </div>
-                </div>
-            </div>
+<div class="media-content">
+    <p class="title is-4 no-padding">Energetic and loving</p>
+        <%= link_to "Find out more", dog_path(2)%>
+    </div>
+</div>
+                
+<div class="content">
+</div>
+</div>
+</div>
+</div>
+                    
+<div class="column is-one-third">
+    <div class="card large">
+        <div class="card-image">
+            <figure class="image">
+                <%= image_tag "panda.jpg",:style => 'height:400px;width:auto;' %>
+            </figure>
         </div>
-                    <div class="column is-one-third">
-                                                                    <div class="card large">
-                                                                        <div class="card-image">
-                                                                            <figure class="image">
-                                                                            <%= image_tag "panda.jpg",:style => 'height:400px;width:auto;' %>
-                                                                            </figure>
-                                                                </div>
-                                                                <div class="card-content">
-                                                                    <div class="media">
-                                                                        <div class="media-left">
-                                                                            <figure class="image is-96x96">
-                                                                            </figure>
-                                                                </div>
-                                                                <div class="media-content">
-                                                                    <p class="title is-4 no-padding">Loves children and dogs!</p>
-                                                                    <%= link_to "Find out more", dog_path(2)%>
-                                                                    <div class="column is-6 is-offset-1">
-                                                                <h1 class="title is-2"></h1>                
-                                                                </div>
-                                                                </div>
-                                                                </div>
-                                                                </div>
-                                                                </div>
-                                                                </div>
-                                                                </div>
-                                                                <center>  
-                                                                <button class="button is-light">  
-                                                                    <%= link_to 'View More', "/dogs" %>
+                                                                
+<div class="card-content">
+    <div class="media">
+        <div class="media-left">
+            <figure class="image is-96x96">
+            </figure>
+        </div>
+
+<div class="media-content">
+    <p class="title is-4 no-padding">Loves children and dogs!</p>
+    <%= link_to "Find out more", dog_path(2)%>
+    <div class="column is-6 is-offset-1">
+    <h1 class="title is-2"></h1>                
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<button class="button is-light">  
+        <%= link_to 'View More', "/dogs" %>
                                                                 </button>  
                                                                 <center> 
                                          
