@@ -1,7 +1,5 @@
 # Pet Shop Marketplace  #
-Github: https://github.com/lindaojinnaka/pet_shop.git
-<br>
-Website: https:://https://enigmatic-castle-68608.herokuapp.com/
+
 
 ## Introduction 
 Identify the problem you’re trying to solve by building this particular marketplace App?
