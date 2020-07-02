@@ -1,19 +1,45 @@
-<%= render "header", dog: @dog %>
-     <section class="hero">
-        <figure class="image">
-        <%= image_tag "banner5.jpg" %> </figure>
-    </section>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1 class="title is-2">
-    <center>Welcome to Dog Match! </center>
-  </h1>
 
-  <h1 class="title is-3">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="all.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <style>
+    #navbarBasicExample {
+        font-size: 20px;
+        background-color; 
+    }
+      
+    a {
+        color:black;
+        text-decoration: none;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+
+    </style>
+</head>
+
+<%= render "header", dog: @dog %>
+<section class="hero is-dark">
+<div class="hero-body">
+  <div class="container">
+    <h1 class="title">
+      Adopt your new best friend!
+    </h1>
+  
+  </div>
+</div>
+</section>
+
+  <h1 class="title is-1 mt-5 ">
   <center>Here are our top featured dogs in NSW </center>
 </h1>
 
@@ -41,13 +67,11 @@
                                 </figure>
                             </div>
                             <div class="media-content">
-                                <p class="title is-4 no-padding">Murphy Loves to play fetch!</p>
-                                <p class="subtitle is-6">Lab Mix</p>
+                            <p class="title is-4 no-padding">Murphy Loves to play fetch!</p>
                                 <%= link_to "Find out more", dog_path(2)%>
                                 </div>
                         </div>
                         <div class="content">
-                            <div class="background-icon"><span class="icon-twitter"></span></div>
                         </div>
                 </div>
             </div>
@@ -67,12 +91,10 @@
                         </div>
                         <div class="media-content">
                             <p class="title is-4 no-padding">Energetic and loving</p>
-                            <p class="subtitle is-6">Bulldog</p>
                             <%= link_to "Find out more", dog_path(2)%>
                             </div>
                     </div>
                     <div class="content">
-                        <div class="background-icon"><span class="icon-facebook"></span></div>
                     </div>
                 </div>
             </div>
@@ -92,7 +114,6 @@
                                                                 </div>
                                                                 <div class="media-content">
                                                                     <p class="title is-4 no-padding">Loves children and dogs!</p>
-                                                                    <p class="subtitle is-6">Pit-Mix</p>
                                                                     <%= link_to "Find out more", dog_path(2)%>
                                                                     <div class="column is-6 is-offset-1">
                                                                 <h1 class="title is-2"></h1>                
@@ -103,90 +124,47 @@
                                                                 </div>
                                                                 </div>
                                                                 </div>
-                                                            <center> <%= link_to 'View More', "/dogs" %> </center>
+                                                                <center>  
+                                                                <button class="button is-light">  
+                                                                    <%= link_to 'View More', "/dogs" %>
+                                                                </button>  
+                                                                <center> 
+                                         
 
-                                                              </a></center>
-                                                            <br>
-                                                            <br>
-                                                            <br>
-                                                            <br>
-                                                            <br>
-                                                           
-                                                            <h1 class="title is-2">
-                                                             <center>  Why adopt? </center>
-                                                             
-                                                           </h1>
-                                                           <h2 class="subtitle is-4">
-                                                           <center> Thousands of dogs are surrendered to animal shelters across NSW every year. Adopting a dog from a shelter is the perfect way to give a dog a second chance at finding happiness in a new loving home. Most importantly, adoption saves lives.<br> <br>Every time an animal is adopted to a furever home, a space is opened in the shelter and foster care network for another dog in need. Adoptions also effectively reduces overcrowded shelters which unfortuntely can lead to euthanizations. <br> <br> Make a difference to a pet's life and Adopt.      
-                                                           <ul>
-  
-</ul> <center>
-                                                           </h2>
                                                          
-                                                       </div>
-                                                       <br>
-                                                       <br>
-                                                       <br>
-                                                       <br>
-                                                       <br>
-                                                       <br>     
-                                                       <br>
-                                                       <br>     
+                                                          
+                                                            <br>
+                                                            <br>
+                                                            <br>
+                                                            <p class="title is-1 is-spaced mt-5 ">Why adopt?</p>
+                                                            <p class="subtitle is-3">housands of dogs are surrendered to animal shelters across NSW every year. 
+                                                            Adopting a dog from a shelter is the perfect way to give a dog a second chance at finding happiness in a new 
+                                                            loving home. Most importantly, adoption saves lives.<br> <br>Every time an animal is adopted to a furever home, 
+                                                            a space is opened in the shelter and foster care network for another dog in need. Adoptions also effectively reduces
+                                                             overcrowded shelters which unfortuntely can lead to euthanizations. <br> <br> Make a difference to a pet's life and 
+                                                            Adopt. 
+                                                            <br>
+                                                            <br>
+                                                            <br>
                                                             
-      <!-- Begin About Me Section -->
-      <div class="section-light about-me" id="about-me">
-        <div class="container">
-          <div class="column is-12 about-me">
-          </div>
-          <div class="columns is-multiline">
-            <div
-              class="column is-6 has-vertically-aligned-content"
-              data-aos="fade-right"
-            >
-              <p class="is-larger">
-                &emsp;&emsp;<strong
-                <br> 
-            
-                 <center>Who we are</center> 
-                 <br> Dog match is a non-profit group that matches dogs in shelters across Australia to their new forever homes! We believe every animal deserves a loving home and it is our aim to match pets to the lifestyle of potentional owners. This ensures a happy and long lasting relationship for the pups and their new best friend! All dogs listed have undergone a comprehensive vet check and are microchipped, desexed and treated for parasites. Rest assured your new best friend will arrive happy and healthy. <br><br>We also pride ourselves in featuring a wide range of breeds, ages, and temperament so you have a wider variety to choose from and also so that each dog is given a chance at a new loving home. If you find a dog that is right for you, please contact the listed shelter to make arrangements to meet your potential new pet.  
-                 </strong
-                >
-              </p>
-             
-              <br/>
-              <div class="is-divider"></div>
-              <div class="columns about-links">  
-                <div class="column">
-                </div>
-                <div class="column">
-                  <p class="heading">
-                </div>
-              </div>
-            </div>
-           
-            <div class="column is-6 right-image " data-aos="fade-left">
-            <br>
-            <br>
-            <br>
-            <%= image_tag "volunteer2.jpg" %>
-            </div>
-          </div>
-        </div>
+                                                           
+
+                                                            <p class="title is-1 is-spaced mt-5 ">Who We Are</p>
+                                                            <%= image_tag "volunteer2.jpg" %>
+                                                            <p class="subtitle is-3">
+                                                            <br> Dog match is a non-profit group that matches dogs in shelters across Australia to their new forever homes! 
+                                                            We believe every animal deserves a loving home and it is our aim to match pets to the lifestyle of potentional owners. 
+                                                            This ensures a happy and long lasting relationship for the pups and their new best friend! All dogs listed have undergone a 
+                                                            comprehensive vet check and are microchipped, desexed and treated for parasites. Rest assured your new best friend will arrive happy and healthy. <br><br>We also pride ourselves in featuring a wide range of breeds, ages, and temperament so you have a wider variety to choose from and also so that each dog is given a chance at a new loving home. If you find a dog that is right for you, please contact the listed shelter to make arrangements to meet your potential new pet.  
+                                                
+                                                        
+                                                            
+     
+
+      <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Pet Match</strong> 
+        </p>
       </div>
-                <footer class="footer">
-                <div class="container">
-                    <div class="content has-text-centered">
-                        <p>
-                            Connect with Us 
-                            <div class="social-media">
-							<a href="https://facebook.com" target="_blank" class="button is-light is-large"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-							<a href="https://instagram.com" target="_blank" class="button is-light is-large"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-							<a href="https://twitter.com" target="_blank" class="button is-light is-large"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-						</div>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </footer>
-            <ul>
-           
+    </footer>

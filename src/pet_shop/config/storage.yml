@@ -9,10 +9,10 @@ local:
 # Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 amazon:
   service: S3
-  access_key_id: AKIASBJEA5DJE7JIDPEG
-  secret_access_key: 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
+  access_key_id: AKIASBJEA5DJKNWUYMEJ
+  secret_access_key: zUXlQ0igsbI2PkXeYEy8e1gHyicoV5rM/6rkmQin
   region: ap-southeast-2
-  bucket: pet-shop3
+  bucket: pet-shop4
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:
